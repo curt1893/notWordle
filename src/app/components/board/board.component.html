@@ -1,0 +1,11 @@
+<app-menu (clearWord)="clearWord()"></app-menu>
+<div id="board"><div *ngFor="let w of words; let i = index">
+    <app-word *ngIf="i >= this.submitted_count" [aWord]="aword" [gWord]="w" [submitted]="false"></app-word>
+    <app-word *ngIf="i < this.submitted_count" [aWord]="aword" [gWord]="w" [submitted]="true"></app-word>
+</div>
+
+<app-keyboard (addLetter)="addLetter($event)" (back)="backSpace()" (submitCurrent)="submit()"></app-keyboard>
+
+</div>
+<div id="errormsg">{{this.error_msg}}</div>
+<div id="winmsg">{{this.win_msg}}</div>

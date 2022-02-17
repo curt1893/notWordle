@@ -1,0 +1,12 @@
+<div id="word" >
+    <div *ngFor="let l of letterArray">
+        <app-letter 
+        [letter]="l.letter" 
+        [good]="l.good" 
+        [warm]="l.warm" 
+        [bad]="l.bad" 
+        [blank]="l.blank" 
+        [unsubmitted]="l.unsubmitted"
+        ></app-letter>
+    </div>
+</div>

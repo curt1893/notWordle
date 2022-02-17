@@ -1,0 +1,9 @@
+    <div *ngIf="!unsubmitted">
+    <div id="good" *ngIf="good">{{letter}}</div>
+    <div *ngIf="warm" id="warm">{{letter}}</div>
+    <div *ngIf="blank" id="blank">{{letter}}</div>
+    <div *ngIf="bad" id="bad">{{letter}}</div>
+    
+    </div>
+
+    <div *ngIf="unsubmitted" id="blank">{{letter}}</div>
